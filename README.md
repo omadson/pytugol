@@ -73,12 +73,10 @@ A versão que estou desenvolvendo ainda não tem suporte para windows.
 1. Baixar o arquivo pytugol
 2. Colocá-lo dentro da pasta que seus arquivos fonte estão.
 3. Abrir o terminal e dar permissão de execução para o arquivo:
-
 ```
 chmod +x pytugol
 ```
 4. Compilar e executar o algoritmo usando o seguinte comando:
-
 ```
 ./pytugol arquivo_fonte
 ```
