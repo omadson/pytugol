@@ -2,7 +2,7 @@
 
 Um projeto simples que eu chamo de um *pré-compilador de portugol* criado utilizando a linguagem *python*.
 
-Uma ferramenta para auxiliar os aspirantes a programadores e professores que querem iniciar seus alunos em programação.
+Uma ferramenta para auxiliar os aspirantes a programadores e professores que querem iniciar seus alunos em programação.<br>
 
 Estou desenvolvendo isso por que não tive uma experiência muito boa com o Portugol IDE, a ferramenta é boa para o início, porém quando quero criar funções ou usar estruturas mais complexas não consigo.
 
@@ -11,6 +11,123 @@ Gosto muito de python e amo sua sintaxe, principalmente a questão de forçar id
 O script que criei transforma o código criado em portugol para python e o executa, simples assim.
 
 É um programa bem simples e não está tão elegante, mas tá dando pra usar. rs
+
+## Características
+São basicamente as mesmas características do python.
+
+* Sensível a caixa
+* Tipagem dinâmica e forte
+* 
+
+## Operadores
+### Matemáticos (aritméticos)
+Aceitam valores numéricos como entrada e sua saída também é numérica.
+
+Considere **a** e **b** duas variáveis numéricas (inteiro ou real).
+
+<table>
+  <tr>
+    <th>Exemplo</th>
+    <th>Nome</th>
+    <th>Resultado</th>
+  </tr>
+  <tr>
+    <td>a + b</td>
+    <td>Soma</td>
+    <td>Soma de <b>a</b> e <b>b</b></td>
+  </tr>
+  <tr>
+    <td>a - b</td>
+    <td>Subtração</td>
+    <td>Subtração de <b>a</b> e <b>b</b></td>
+  </tr>
+  <tr>
+    <td>a * b</td>
+    <td>Multiplicação</td>
+    <td>Multiplicação de <b>a</b> e <b>b</b></td>
+  </tr>
+  <tr>
+    <td>a / b</td>
+    <td>Divisão</td>
+    <td>Divisão de <b>a</b> por <b>b</b></td>
+  </tr>
+  <tr>
+    <td>a % b</td>
+    <td>Módulo</td>
+    <td>Resto da divisão de <b>a</b> por <b>b</b></td>
+  </tr>
+</table>
+
+### Relacionais
+Aceitam valores numéricos (inteiro ou real) como entrada e sua saída é lógica(Verdadeiro ou Falso)
+
+Considere **a = 10** e **b = 3** duas variáveis numéricas (inteiro ou real).
+
+<table>
+  <tr>
+    <th>Exemplo</th>
+    <th>Nome</th>
+    <th>Resultado</th>
+  </tr>
+  <tr>
+    <td>a > b</td>
+    <td>Maior que</td>
+    <td>Verdadeiro</td>
+  </tr>
+  <tr>
+    <td>a >= b</td>
+    <td>Maior ou igual a</td>
+    <td>Verdadeiro</td>
+  </tr>
+  <tr>
+    <td>a &lt; b</td>
+    <td>Menor que</td>
+    <td>Falso</td>
+  </tr>
+  <tr>
+    <td>a &lt;= b</td>
+    <td>Menor ou igual a</td>
+    <td>Falso</td>
+  </tr>
+  <tr>
+    <td>a == b</td>
+    <td>Igual a</td>
+    <td>Falso</td>
+  </tr>
+  <tr>
+    <td>a != b</td>
+    <td>Diferente de</td>
+    <td>Verdadeiro</td>
+  </tr>
+</table>
+
+### Lógicos
+Aceitam valores lógicos como entrada e sua saída também é lógica.
+
+Considere **a** e **b** duas variáveis de qualquer tipo e **c** uma variável do tipo lógico.
+<table>
+  <tr>
+    <th>Exemplo</th>
+    <th>Nome</th>
+    <th>Resultado</th>
+  </tr>
+  <tr>
+    <td>a <b>e</b> b</td>
+    <td>Conjução</td>
+    <td>Soma de <b>a</b> e <b>b</b></td>
+  </tr>
+  <tr>
+    <td>a <b>ou</b> b</td>
+    <td>Disjunção</td>
+    <td>Resto da divisão de <b>a</b> por <b>b</b></td>
+  </tr>
+  <tr>
+    <td><b>não(</b>c<b>)</b></td>
+    <td>Negação</td>
+    <td>Retorna o valor invertido da variável <b>c</b></td>
+  </tr>
+</table>
+
 
 ## Sintaxe
 
@@ -26,7 +143,6 @@ var = ler("Digite um valor para var: ")
 ```
 
 ### Estrutura de decisão
-
 ```
 se condição1 então
     comando1
@@ -43,7 +159,6 @@ senão
 ```
 
 ### Estrutura de repetição (para)
-
 ```
 para variavel na lista faça
     comando1
@@ -52,7 +167,6 @@ para variavel na lista faça
     ...
 ```
 ### Estrutura de repetição (enquanto)
-
 ```
 enquanto condição faça
     comando1
@@ -60,6 +174,7 @@ enquanto condição faça
     comando3
     ...
 ```
+
 
 ## Como usar?
 A versão que estou desenvolvendo ainda não tem suporte para windows.
@@ -70,14 +185,15 @@ A versão que estou desenvolvendo ainda não tem suporte para windows.
 * Saber o básico do básico sobre utilização do shell
 
 ### Procedimento
+
 1. Baixar o arquivo pytugol
 2. Colocá-lo dentro da pasta que seus arquivos fonte estão.
 3. Abrir o terminal e dar permissão de execução para o arquivo:
-```
+```bash
 chmod +x pytugol
 ```
 4. Compilar e executar o algoritmo usando o seguinte comando:
-```
+```bash
 ./pytugol arquivo_fonte
 ```
 
