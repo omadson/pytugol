@@ -1,8 +1,7 @@
 # [Pytugol](http://github.com/omadson/pytugol)
-
 Um projeto simples que eu chamo de um *pré-compilador de portugol* criado utilizando a linguagem *python*.
 
-Uma ferramenta para auxiliar os aspirantes a programadores e professores que querem iniciar seus alunos em programação.<br>
+Uma ferramenta para auxiliar os aspirantes a programadores e professores que querem iniciar seus alunos em programação.
 
 Estou desenvolvendo isso por que não tive uma experiência muito boa com o Portugol IDE, a ferramenta é boa para o início, porém quando quero criar funções ou usar estruturas mais complexas não consigo.
 
@@ -12,15 +11,34 @@ O script que criei transforma o código criado em portugol para python e o execu
 
 É um programa bem simples e não está tão elegante, mas tá dando pra usar. rs
 
-## Características
-São basicamente as mesmas características do python.
+## Linguagem
+### Palavras reservadas
+* escrever
+* ler
+* função
+* se
+* senão
+* retorne
+* para
+* na
+* faça
 
-* Sensível a caixa
-* Tipagem dinâmica e forte
-* 
+### Características
+* Um comando por linha, sem o uso do ";" (ponto e virgula)
+* Blocos são delimitados por indentação
+* Comentários:
+```
+# Olá, eu sou um comentário
+```
 
-## Operadores
-### Matemáticos (aritméticos)
+### Tipos básicos
+* Números: 2 *(inteiro)* / 5.6 *(real)*
+* Textos: "Olá, eu sou um valor textual!"
+* Listas: [1, 3, 4, 7]
+* Booleanos: *Verdadeiro* ou *Falso*
+
+### Operadores
+#### Matemáticos (aritméticos)
 Aceitam valores numéricos como entrada e sua saída também é numérica.
 
 Considere **a** e **b** duas variáveis numéricas (inteiro ou real).
@@ -58,7 +76,43 @@ Considere **a** e **b** duas variáveis numéricas (inteiro ou real).
   </tr>
 </table>
 
-### Relacionais
+#### Atribuição
+Considere **a** e **b** duas variáveis numéricas (inteiro ou real).
+
+<table>
+  <tr>
+    <th>Exemplo</th>
+    <th>Nome</th>
+    <th>Resultado</th>
+  </tr>
+  <tr>
+    <td>a += b</td>
+    <td>Soma</td>
+    <td>a = a + b</td>
+  </tr>
+  <tr>
+    <td>a -= b</td>
+    <td>Subtração</td>
+    <td>a = a - b</td>
+  </tr>
+  <tr>
+    <td>a \*= b</td>
+    <td>Multiplicação</td>
+    <td>a = a * b</td>
+  </tr>
+  <tr>
+    <td>a /= b</td>
+    <td>Divisão</td>
+    <td>a = a / b</td>
+  </tr>
+  <tr>
+    <td>a % b</td>
+    <td>Módulo</td>
+    <td>a = a % b</td>
+  </tr>
+</table>
+
+#### Relacionais
 Aceitam valores numéricos (inteiro ou real) como entrada e sua saída é lógica(Verdadeiro ou Falso)
 
 Considere **a = 10** e **b = 3** duas variáveis numéricas (inteiro ou real).
@@ -101,7 +155,7 @@ Considere **a = 10** e **b = 3** duas variáveis numéricas (inteiro ou real).
   </tr>
 </table>
 
-### Lógicos
+#### Lógicos
 Aceitam valores lógicos como entrada e sua saída também é lógica.
 
 Considere **a** e **b** duas variáveis de qualquer tipo e **c** uma variável do tipo lógico.
@@ -129,20 +183,39 @@ Considere **a** e **b** duas variáveis de qualquer tipo e **c** uma variável d
 </table>
 
 
-## Sintaxe
+### Sintaxe
 
-### Entrada de dados
+#### Entrada de dados
 
 ```
 escrever("Olá, mundo!")
 ```
-### Entrada de dados
+#### Entrada de dados
 
 ```
 var = ler("Digite um valor para var: ")
 ```
+#### Estrutura de decisão (simples)
+```
+se condição1 então
+    comando1
+    comando2
+    ...
+```
 
-### Estrutura de decisão
+#### Estrutura de decisão (composta)
+```
+se condição1 então
+    comando1
+    comando2
+    ...
+senão
+    comando5
+    comando6
+    ...
+```
+
+#### Estrutura de decisão (encadeada)
 ```
 se condição1 então
     comando1
@@ -158,7 +231,7 @@ senão
     ...
 ```
 
-### Estrutura de repetição (para)
+#### Estrutura de repetição (para)
 ```
 para variavel na lista faça
     comando1
@@ -172,6 +245,24 @@ enquanto condição faça
     comando1
     comando2
     comando3
+    ...
+```
+### Função (sem retorno)
+```
+função nome_da_funcao(argumentos) faça
+    comando1
+    comando2
+    comando3
+    ...
+```
+### Função (com retorno)
+```
+função nome_da_funcao(argumentos) faça
+    comando1
+    comando2
+    comando3
+    ...
+    retorne valor_de_saida
     ...
 ```
 
