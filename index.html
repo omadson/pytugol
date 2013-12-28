@@ -1,1 +1,386 @@
-Olá, mundo das páginas do GitHub!
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Pytugol by omadson</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Pytugol</h1>
+        <p>Um projeto simples de um pre-compilador de portugol criado utilizando python.</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/omadson/pytugol" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/omadson/pytugol/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/omadson/pytugol/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a name="pytugol" class="anchor" href="#pytugol"><span class="octicon octicon-link"></span></a><a href="http://github.com/omadson/pytugol">Pytugol</a>
+</h1>
+
+<p>Um projeto simples que eu chamo de um <em>pré-compilador de portugol</em> criado utilizando a linguagem <em>python</em>.</p>
+
+<p>Uma ferramenta para auxiliar os aspirantes a programadores e professores que querem iniciar seus alunos em programação.</p>
+
+<p>Estou desenvolvendo isso por que não tive uma experiência muito boa com o Portugol IDE, a ferramenta é boa para o início, porém quando quero criar funções ou usar estruturas mais complexas não consigo.</p>
+
+<p>Gosto muito de python e amo sua sintaxe, principalmente a questão de forçar identação de código em blocos.</p>
+
+<p>O script que criei transforma o código criado em portugol para python e o executa, simples assim.</p>
+
+<p>É um programa bem simples e não está tão elegante, mas tá dando pra usar. rs</p>
+
+<h2>
+<a name="linguagem" class="anchor" href="#linguagem"><span class="octicon octicon-link"></span></a>Linguagem</h2>
+
+<h3>
+<a name="palavras-reservadas" class="anchor" href="#palavras-reservadas"><span class="octicon octicon-link"></span></a>Palavras reservadas</h3>
+
+<ul>
+<li>escrever</li>
+<li>ler</li>
+<li>função</li>
+<li>se</li>
+<li>senão</li>
+<li>retorne</li>
+<li>para</li>
+<li>na</li>
+<li>faça</li>
+</ul><h3>
+<a name="caracter%C3%ADsticas" class="anchor" href="#caracter%C3%ADsticas"><span class="octicon octicon-link"></span></a>Características</h3>
+
+<ul>
+<li>Um comando por linha, sem o uso do ";" (ponto e virgula)</li>
+<li>Blocos são delimitados por indentação</li>
+<li>Comentários:
+<code>
+# Olá, eu sou um comentário
+</code>
+</li>
+</ul><h3>
+<a name="tipos-b%C3%A1sicos" class="anchor" href="#tipos-b%C3%A1sicos"><span class="octicon octicon-link"></span></a>Tipos básicos</h3>
+
+<ul>
+<li>Números: 2 <em>(inteiro)</em> / 5.6 <em>(real)</em>
+</li>
+<li>Textos: "Olá, eu sou um valor textual!"</li>
+<li>Listas: [1, 3, 4, 7]</li>
+<li>Booleanos: <em>Verdadeiro</em> ou <em>Falso</em>
+</li>
+</ul><h3>
+<a name="operadores" class="anchor" href="#operadores"><span class="octicon octicon-link"></span></a>Operadores</h3>
+
+<h4>
+<a name="matem%C3%A1ticos-aritm%C3%A9ticos" class="anchor" href="#matem%C3%A1ticos-aritm%C3%A9ticos"><span class="octicon octicon-link"></span></a>Matemáticos (aritméticos)</h4>
+
+<p>Aceitam valores numéricos como entrada e sua saída também é numérica.</p>
+
+<p>Considere <strong>a</strong> e <strong>b</strong> duas variáveis numéricas (inteiro ou real).</p>
+
+<table>
+<tr>
+<th>Exemplo</th>
+    <th>Nome</th>
+    <th>Resultado</th>
+  </tr>
+<tr>
+<td>a + b</td>
+    <td>Soma</td>
+    <td>Soma de <b>a</b> e <b>b</b>
+</td>
+  </tr>
+<tr>
+<td>a - b</td>
+    <td>Subtração</td>
+    <td>Subtração de <b>a</b> e <b>b</b>
+</td>
+  </tr>
+<tr>
+<td>a * b</td>
+    <td>Multiplicação</td>
+    <td>Multiplicação de <b>a</b> e <b>b</b>
+</td>
+  </tr>
+<tr>
+<td>a / b</td>
+    <td>Divisão</td>
+    <td>Divisão de <b>a</b> por <b>b</b>
+</td>
+  </tr>
+<tr>
+<td>a % b</td>
+    <td>Módulo</td>
+    <td>Resto da divisão de <b>a</b> por <b>b</b>
+</td>
+  </tr>
+</table><h4>
+<a name="atribui%C3%A7%C3%A3o" class="anchor" href="#atribui%C3%A7%C3%A3o"><span class="octicon octicon-link"></span></a>Atribuição</h4>
+
+<p>Considere <strong>a</strong> e <strong>b</strong> duas variáveis numéricas (inteiro ou real).</p>
+
+<table>
+<tr>
+<th>Exemplo</th>
+    <th>Nome</th>
+    <th>Resultado</th>
+  </tr>
+<tr>
+<td>a += b</td>
+    <td>Soma</td>
+    <td>a = a + b</td>
+  </tr>
+<tr>
+<td>a -= b</td>
+    <td>Subtração</td>
+    <td>a = a - b</td>
+  </tr>
+<tr>
+<td>a \*= b</td>
+    <td>Multiplicação</td>
+    <td>a = a * b</td>
+  </tr>
+<tr>
+<td>a /= b</td>
+    <td>Divisão</td>
+    <td>a = a / b</td>
+  </tr>
+<tr>
+<td>a % b</td>
+    <td>Módulo</td>
+    <td>a = a % b</td>
+  </tr>
+</table><h4>
+<a name="relacionais" class="anchor" href="#relacionais"><span class="octicon octicon-link"></span></a>Relacionais</h4>
+
+<p>Aceitam valores numéricos (inteiro ou real) como entrada e sua saída é lógica(Verdadeiro ou Falso)</p>
+
+<p>Considere <strong>a = 10</strong> e <strong>b = 3</strong> duas variáveis numéricas (inteiro ou real).</p>
+
+<table>
+<tr>
+<th>Exemplo</th>
+    <th>Nome</th>
+    <th>Resultado</th>
+  </tr>
+<tr>
+<td>a &gt; b</td>
+    <td>Maior que</td>
+    <td>Verdadeiro</td>
+  </tr>
+<tr>
+<td>a &gt;= b</td>
+    <td>Maior ou igual a</td>
+    <td>Verdadeiro</td>
+  </tr>
+<tr>
+<td>a &lt; b</td>
+    <td>Menor que</td>
+    <td>Falso</td>
+  </tr>
+<tr>
+<td>a &lt;= b</td>
+    <td>Menor ou igual a</td>
+    <td>Falso</td>
+  </tr>
+<tr>
+<td>a == b</td>
+    <td>Igual a</td>
+    <td>Falso</td>
+  </tr>
+<tr>
+<td>a != b</td>
+    <td>Diferente de</td>
+    <td>Verdadeiro</td>
+  </tr>
+</table><h4>
+<a name="l%C3%B3gicos" class="anchor" href="#l%C3%B3gicos"><span class="octicon octicon-link"></span></a>Lógicos</h4>
+
+<p>Aceitam valores lógicos como entrada e sua saída também é lógica.</p>
+
+<p>Considere <strong>a</strong> e <strong>b</strong> duas variáveis de qualquer tipo e <strong>c</strong> uma variável do tipo lógico.</p>
+
+<table>
+<tr>
+<th>Exemplo</th>
+    <th>Nome</th>
+    <th>Resultado</th>
+  </tr>
+<tr>
+<td>a <b>e</b> b</td>
+    <td>Conjução</td>
+    <td>Soma de <b>a</b> e <b>b</b>
+</td>
+  </tr>
+<tr>
+<td>a <b>ou</b> b</td>
+    <td>Disjunção</td>
+    <td>Resto da divisão de <b>a</b> por <b>b</b>
+</td>
+  </tr>
+<tr>
+<td>
+<b>não(</b>c<b>)</b>
+</td>
+    <td>Negação</td>
+    <td>Retorna o valor invertido da variável <b>c</b>
+</td>
+  </tr>
+</table><h3>
+<a name="sintaxe" class="anchor" href="#sintaxe"><span class="octicon octicon-link"></span></a>Sintaxe</h3>
+
+<h4>
+<a name="entrada-de-dados" class="anchor" href="#entrada-de-dados"><span class="octicon octicon-link"></span></a>Entrada de dados</h4>
+
+<pre><code>escrever("Olá, mundo!")
+</code></pre>
+
+<h4>
+<a name="entrada-de-dados-1" class="anchor" href="#entrada-de-dados-1"><span class="octicon octicon-link"></span></a>Entrada de dados</h4>
+
+<pre><code>var = ler("Digite um valor para var: ")
+</code></pre>
+
+<h4>
+<a name="estrutura-de-decis%C3%A3o-simples" class="anchor" href="#estrutura-de-decis%C3%A3o-simples"><span class="octicon octicon-link"></span></a>Estrutura de decisão (simples)</h4>
+
+<pre><code>se condição1 então
+    comando1
+    comando2
+    ...
+</code></pre>
+
+<h4>
+<a name="estrutura-de-decis%C3%A3o-composta" class="anchor" href="#estrutura-de-decis%C3%A3o-composta"><span class="octicon octicon-link"></span></a>Estrutura de decisão (composta)</h4>
+
+<pre><code>se condição1 então
+    comando1
+    comando2
+    ...
+senão
+    comando5
+    comando6
+    ...
+</code></pre>
+
+<h4>
+<a name="estrutura-de-decis%C3%A3o-encadeada" class="anchor" href="#estrutura-de-decis%C3%A3o-encadeada"><span class="octicon octicon-link"></span></a>Estrutura de decisão (encadeada)</h4>
+
+<pre><code>se condição1 então
+    comando1
+    comando2
+    ...
+senão se condição2 então
+    comando3
+    comando4
+    ...
+senão
+    comando5
+    comando6
+    ...
+</code></pre>
+
+<h4>
+<a name="estrutura-de-repeti%C3%A7%C3%A3o-para" class="anchor" href="#estrutura-de-repeti%C3%A7%C3%A3o-para"><span class="octicon octicon-link"></span></a>Estrutura de repetição (para)</h4>
+
+<pre><code>para variavel na lista faça
+    comando1
+    comando2
+    comando3
+    ...
+</code></pre>
+
+<h3>
+<a name="estrutura-de-repeti%C3%A7%C3%A3o-enquanto" class="anchor" href="#estrutura-de-repeti%C3%A7%C3%A3o-enquanto"><span class="octicon octicon-link"></span></a>Estrutura de repetição (enquanto)</h3>
+
+<pre><code>enquanto condição faça
+    comando1
+    comando2
+    comando3
+    ...
+</code></pre>
+
+<h3>
+<a name="fun%C3%A7%C3%A3o-sem-retorno" class="anchor" href="#fun%C3%A7%C3%A3o-sem-retorno"><span class="octicon octicon-link"></span></a>Função (sem retorno)</h3>
+
+<pre><code>função nome_da_funcao(argumentos) faça
+    comando1
+    comando2
+    comando3
+    ...
+</code></pre>
+
+<h3>
+<a name="fun%C3%A7%C3%A3o-com-retorno" class="anchor" href="#fun%C3%A7%C3%A3o-com-retorno"><span class="octicon octicon-link"></span></a>Função (com retorno)</h3>
+
+<pre><code>função nome_da_funcao(argumentos) faça
+    comando1
+    comando2
+    comando3
+    ...
+    retorne valor_de_saida
+    ...
+</code></pre>
+
+<h2>
+<a name="como-usar" class="anchor" href="#como-usar"><span class="octicon octicon-link"></span></a>Como usar?</h2>
+
+<p>A versão que estou desenvolvendo ainda não tem suporte para windows.</p>
+
+<h3>
+<a name="pr%C3%A9-requisitos" class="anchor" href="#pr%C3%A9-requisitos"><span class="octicon octicon-link"></span></a>Pré-requisitos</h3>
+
+<ul>
+<li>Usar linux</li>
+<li>Saber o básico do básico sobre utilização do shell</li>
+</ul><h3>
+<a name="procedimento" class="anchor" href="#procedimento"><span class="octicon octicon-link"></span></a>Procedimento</h3>
+
+<ol>
+<li>Baixar o arquivo pytugol</li>
+<li>Colocá-lo dentro da pasta que seus arquivos fonte estão.</li>
+<li>Abrir o terminal e dar permissão de execução para o arquivo:
+<code>
+chmod +x pytugol
+</code>
+</li>
+<li>Compilar e executar o algoritmo usando o seguinte comando:
+<code>
+./pytugol arquivo_fonte
+</code>
+</li>
+</ol><p>Você só precisa dar permissão uma única vês, depois disso, para compilar seus códigos você reperirá somente o passo 4.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/omadson">omadson</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
