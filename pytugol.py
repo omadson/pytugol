@@ -5,7 +5,7 @@ os.system("clear")
 
 dicionario = [("para", "for"), ("na", "in"), (" faça", ":"), ("enquanto", "while"), ("senão se ", "elif "), ("senão", "else:"), ("então", ":"), ("se ", "if "), ("função", "def"), (" e ", " and "), (" ou ", " or "), ("não(", "not("), ("Verdadeiro", "True"), ("Falso", "False"), ("escrever", "print"), ("retorne", "return")]
 
-cabecalho = "'#coding: utf8\nimport math\ndef ler(texto):\n  return raw_input(texto)\ndef lista(inicio, fim, passo=1):\n  return range(inicio, fim+1, passo)\ndef raiz(n, r):\n  return n ** (1/float(r))\ndef texto(n):\n	return str(n)'"
+cabecalho = "'#coding: utf8\nimport math\ndef ler(texto):\n  t = raw_input(texto)\n  if t.isdigit():\n    return float(t)\n  else:\n    return t\ndef lista(inicio, fim, passo=1):\n  return range(inicio, fim+1, passo)\ndef raiz(n, r):\n  return n ** (1/float(r))\ndef texto(n):\n	return str(n)'"
 
 os.system("echo %s > %s.py" % (cabecalho, sys.argv[1]))
 
